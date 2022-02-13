@@ -60,6 +60,41 @@
 
     </div>
     
+<!-- TIEMPO -->
+
+      <div class="col-sm-6">
+<div class="card">
+  <div class="card-header text-center">
+    Tiempo
+  </div>
+  <div class="card-body">
+    <h5 class="card-title text-left">Dias a horas</h5>
+    <input type="number" class="" v-model="cantidadtiempo" id="cantidad" placeholder="Ingrese los dias">
+ <span class="ms-3">{{totaltiempo}} hora/s</span>
+  </div>
+  <div class="">
+    <a href="#" v-on:click="convertirtiempo" class="btn btn-primary ms-3 px-3">Convertir</a>
+  </div>
+</div>
+      </div>
+
+      <!-- Almacenamiento -->
+
+<div class="col-sm-6">
+<div class="card">
+  <div class="card-header text-center">
+    Almacenamiento
+  </div>
+  <div class="card-body">
+    <h5 class="card-title text-left">Gigabytes a megas</h5>
+    <input type="number" class="" v-model="cantidadalmacenamiento" id="cantidad" placeholder="Ingrese los Gigabytes">
+ <span class="ms-3">{{totalalmacenamiento}} mega/s </span>
+  </div>
+  <div class="">
+    <a href="#" v-on:click="convertiralmacenamiento" class="btn btn-primary ms-3 px-3">Convertir</a>
+  </div>
+</div>
+      </div>
 
 
 
@@ -87,6 +122,12 @@ export default {
 
       cantidadkilometros:'',
       totalkilometro:0,
+      
+      cantidadtiempo:'',
+      totaltiempo:0,
+
+      cantidadalmacenamiento:'',
+      totalalmacenamiento:0
 
       
     }
@@ -103,7 +144,13 @@ export default {
     convertirkilometros(){
       this.totalkilometro = this.cantidadkilometros * 0.62
     },
+convertirtiempo(){
+      this.totaltiempo = this.cantidadtiempo * 24 
+    },
 
+    convertiralmacenamiento(){
+      this.totalalmacenamiento = this.cantidadalmacenamiento * 1000
+    },
     
   },
   

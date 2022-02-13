@@ -57,9 +57,6 @@
       </div>
 
       
-
-    </div>
-    
 <!-- TIEMPO -->
 
       <div class="col-sm-6">
@@ -95,6 +92,9 @@
   </div>
 </div>
       </div>
+    </div>
+    
+
 
 
 
